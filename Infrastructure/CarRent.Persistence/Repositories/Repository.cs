@@ -1,11 +1,5 @@
-﻿using CarRent.Application.Interfaces;
-using CarRent.Persistence.Context;
+﻿using CarRent.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static CarRent.Application.Interfaces.IRepository;
 
 namespace CarRent.Persistence.Repositories

@@ -38,7 +38,7 @@ namespace CarRent.WebApi.Controllers
             _removeCarCommandHandler = removeCarCommandHandler;
             _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
             _getLastFiveCarsWithBrandQueryHandler = getLastFiveCarsWithBrandQueryHandler;
-        }
+		}
 
         [HttpGet]
         public async Task<IActionResult> CarList()
@@ -95,5 +95,6 @@ namespace CarRent.WebApi.Controllers
 
             return Ok(values);
         }
-    }
+
+	}
 }

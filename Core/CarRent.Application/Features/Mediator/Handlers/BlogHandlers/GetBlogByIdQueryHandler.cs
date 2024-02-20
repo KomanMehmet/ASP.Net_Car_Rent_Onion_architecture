@@ -27,7 +27,8 @@ namespace CarRent.Application.Features.Mediator.Handlers.BlogHandlers
                 CategoryID = value.CategoryID,
                 CoverImageUrl = value.CoverImageUrl,
                 CreatedDate = value.CreatedDate,
-                Title = value.Title
+                Title = value.Title,
+                Description = value.Description
             };
         }
     }
