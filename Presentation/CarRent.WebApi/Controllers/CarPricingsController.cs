@@ -1,8 +1,5 @@
-﻿using CarRent.Application.Features.Mediator.Commands.TestimonialCommands;
-using CarRent.Application.Features.Mediator.Queries.CarPricingQueries;
-using CarRent.Application.Features.Mediator.Queries.TestimonialQueries;
+﻿using CarRent.Application.Features.Mediator.Queries.CarPricingQueries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRent.WebApi.Controllers
@@ -26,6 +23,16 @@ namespace CarRent.WebApi.Controllers
 			return Ok(values);
 		}
 
-		
+		[HttpGet("GetCarPricingWithTimePeriodList")]
+		public async Task<IActionResult> GetCarPricingWithTimePeriodList()
+		{
+			var values = await _mediator.Send(new GetCarPricingWithTimePeriodQuery());
+
+			return Ok(values);
+		}
+
+
+
+
 	}
 }

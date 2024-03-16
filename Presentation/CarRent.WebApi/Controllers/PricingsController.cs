@@ -1,7 +1,6 @@
 ﻿using CarRent.Application.Features.Mediator.Commands.PricingCommands;
 using CarRent.Application.Features.Mediator.Queries.PricingQueries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRent.WebApi.Controllers

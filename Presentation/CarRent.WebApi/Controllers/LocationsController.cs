@@ -1,11 +1,12 @@
 ﻿using CarRent.Application.Features.Mediator.Commands.LocationCommands;
 using CarRent.Application.Features.Mediator.Queries.LocationQueries;
 using MediatR;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRent.WebApi.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class LocationsController : ControllerBase

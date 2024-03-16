@@ -1,0 +1,44 @@
+﻿@model UpdateAuthorDto
+
+
+@{
+    ViewData["Title"] = "UpdateAuthor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yazar Bilgisi Güncelle</h4>
+                        <p class="card-subtitle mb-4">Yazar alanını aşağıdaki panelden güncelleyebilirsiniz.</p>
+
+                        <form method="post">
+                            <input type="hidden" asp-for="AuthorID" />
+                            <div class="form-group">
+                                <label for="exampleInputName">Ad Soyad</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Ad Soyad Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImageUrl">Görsel</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel için URL Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Yazar Açıklama Bilgisini Giriniz.'">
+                            </div>
+
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Yazar Bilgisi Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

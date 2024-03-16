@@ -1,5 +1,4 @@
 ﻿using CarRent.Application.Features.Mediator.Commands.AuthorCommands;
-using CarRent.Application.Interfaces;
 using CarRent.Domain.Entities;
 using MediatR;
 using static CarRent.Application.Interfaces.IRepository;

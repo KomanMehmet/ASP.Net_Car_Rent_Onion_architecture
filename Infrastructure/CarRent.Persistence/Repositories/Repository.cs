@@ -1,5 +1,6 @@
 ﻿using CarRent.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using static CarRent.Application.Interfaces.IRepository;
 
 namespace CarRent.Persistence.Repositories
@@ -39,6 +40,11 @@ namespace CarRent.Persistence.Repositories
         {
             _context.Set<T>().Update(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
+        {
+            return await _context.Set<T>().SingleOrDefaultAsync(filter);
         }
     }
 }

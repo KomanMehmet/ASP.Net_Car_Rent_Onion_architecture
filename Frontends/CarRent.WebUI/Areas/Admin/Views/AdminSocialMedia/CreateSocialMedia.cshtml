@@ -1,0 +1,42 @@
+﻿@model CreateSocialMediaDto
+
+
+@{
+    ViewData["Title"] = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Sosyal Medya Bilgisi Girişi</h4>
+                        <p class="card-subtitle mb-4">Yeni Bir Sosyal Medya Bilgisi Oluşturma Sayfasıdır. Bilgileri Eksiksiz Olarak Doldurun.</p>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Sosyal Medya Adı</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Sosyal Medya Adını Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUrl">URL Adresi</label>
+                                <input type="text" class="form-control" id="exampleInputUrl" asp-for="Url" placeholder="Url Adresini Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputIconUrl">Icon</label>
+                                <input type="text" class="form-control" id="exampleInputIconUrl" asp-for="Icon" placeholder="Icon Url Adresini Giriniz.">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Sosyal Medya Bilgisini Kaydet</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

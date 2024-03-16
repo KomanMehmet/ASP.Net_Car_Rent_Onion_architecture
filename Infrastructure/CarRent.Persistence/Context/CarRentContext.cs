@@ -1,10 +1,5 @@
 ﻿using CarRent.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarRent.Persistence.Context
 {
@@ -36,6 +31,26 @@ namespace CarRent.Persistence.Context
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<TagCloud> TagClouds { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<RentACar> RentACars { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Reservation>()
+                .HasOne(x => x.PickUpLocation)//Rezervasyon tablosundaki picuplocation ile 
+                .WithMany(y => y.PickUpReservation)//location tablosundaki pickupreservation'u ilişkilendir.
+                .HasForeignKey(z => z.PickUpLocationID)//pickuplocationID'ye göre ilişkilendir.
+                .OnDelete(DeleteBehavior.ClientSetNull);//silindiği zaman da null bir değer dönmesin diye bunu yapıyoruz.
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(x => x.DropOffLocation)
+                .WithMany(y => y.DropOffReservation)
+                .HasForeignKey(z => z.DropOffLocationID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
 
     }
 }

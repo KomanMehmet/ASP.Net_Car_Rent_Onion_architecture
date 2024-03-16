@@ -1,0 +1,43 @@
+﻿@model CreateAboutDto
+
+
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Hakkımızda Bilgisi Girişi</h4>
+                        <p class="card-subtitle mb-4">Hakkımızda alanına veri girişini aşağıdaki panelden yapabilirsiniz. Tasarımda bozulma olmaması adına yeni bir banner girişi yaptıktan sonra önceki banner alanını silin. Sadece bir tane banner verisi kalmalıdır.</p>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Title" placeholder="Başlığı Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <textarea class="form-control" rows="5" asp-for="Description" placeholder="Açıklamayı Giriniz"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImageURL">Image URL</label>
+                                <input type="text" class="form-control" id="exampleInputImageURL" asp-for="ImageUrl" placeholder="Image'ın URL Bilgisini Giriniz.'">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Hakkımızda Bilgisi Kaydet</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -16,7 +16,8 @@ namespace CarRent.WebUI.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-
+            ViewBag.v1 = "İletişim";
+            ViewBag.v2 = "İletişim Adresi";
 
             return View();
         }
@@ -24,6 +25,8 @@ namespace CarRent.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CreateContactDto createContactDto)
         {
+            
+
             var client = _httpClientFactory.CreateClient();
 
             createContactDto.SendDate = DateTime.Now;

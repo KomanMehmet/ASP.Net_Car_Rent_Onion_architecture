@@ -1,6 +1,8 @@
 ﻿using CarRent.Application.Features.CQRS.Commands.CarCommands;
 using CarRent.Application.Features.CQRS.Handlers.CarHandlers;
 using CarRent.Application.Features.CQRS.Queries.CarQueries;
+using CarRent.Application.Features.Mediator.Queries.StatisticsQueries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRent.WebApi.Controllers
@@ -96,5 +98,7 @@ namespace CarRent.WebApi.Controllers
             return Ok(values);
         }
 
-	}
+        
+
+    }
 }

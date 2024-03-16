@@ -11,5 +11,9 @@
         void Remove(T entity);
 
         T GetByID(int id);
+
+        List<T> GetCommentsByBlogId(int id);
+
+        public int GetCountCommendtByBlog(int id);
     }
 }

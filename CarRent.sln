@@ -21,7 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent.WebUI", "Frontends\CarRent.WebUI\CarRent.WebUI.csproj", "{ED676500-A755-4535-8F11-77943ABC0275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent.Dto", "Frontends\CarRent.Dto\CarRent.Dto.csproj", "{0EFCC559-F5EF-4660-8878-BD9B254C57E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent.Dto", "Frontends\CarRent.Dto\CarRent.Dto.csproj", "{0EFCC559-F5EF-4660-8878-BD9B254C57E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{AB899CA5-E5CE-4749-8E2F-5D1340E5FEF9}"
+	ProjectSection(SolutionItems) = preProject
+		StaticticList.txt = StaticticList.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

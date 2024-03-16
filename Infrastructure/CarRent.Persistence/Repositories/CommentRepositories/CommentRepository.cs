@@ -27,7 +27,6 @@ namespace CarRent.Persistence.Repositories.CommentRepositories
                 Content = x.Content,
                 CreatedDate = DateTime.Now,
                 CommentID = x.CommentID,
-                ImageUrl = x.ImageUrl,
                 BlogID = x.BlogID,
             }).ToList();
         }
@@ -35,6 +34,11 @@ namespace CarRent.Persistence.Repositories.CommentRepositories
         public Comment GetByID(int id)
         {
             return _context.Comments.Find(id);
+        }
+
+        public List<Comment> GetCommentsByBlogId(int id)
+        {
+            return _context.Set<Comment>().Where(x => x.BlogID == id).ToList();
         }
 
         public void Remove(Comment entity)
@@ -48,6 +52,11 @@ namespace CarRent.Persistence.Repositories.CommentRepositories
         {
             _context.Comments.Update(entity);
             _context.SaveChanges();
+        }
+
+        public int GetCountCommendtByBlog(int id)
+        {
+            return _context.Comments.Where(x => x.BlogID == id).Count();
         }
     }
 }

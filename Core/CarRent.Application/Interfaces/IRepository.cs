@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace CarRent.Application.Interfaces
 {
@@ -20,7 +16,7 @@ namespace CarRent.Application.Interfaces
 
             Task RemoveAsync(T entity);
 
-
+            Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter);
         }
     }
 }

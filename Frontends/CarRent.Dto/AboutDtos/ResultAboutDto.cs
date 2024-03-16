@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarRent.Dto.AboutDtos
+﻿namespace CarRent.Dto.AboutDtos
 {
     public class ResultAboutDto
     {
-        public int aboudID { get; set; }
+        public int AboudID { get; set; }
 
-        public string title { get; set; }
+        public string Title { get; set; }
 
-        public string description { get; set; }
+        public string Description { get; set; }
 
-        public string imageUrl { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
 

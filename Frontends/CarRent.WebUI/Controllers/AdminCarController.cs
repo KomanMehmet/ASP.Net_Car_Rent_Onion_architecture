@@ -26,7 +26,7 @@ namespace CarRent.WebUI.Controllers
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();//response mesajdan gelen içeriğimizi stringe çeviriyoruz ve jsonData'ya aktarıyoruz.
 
-                var values = JsonConvert.DeserializeObject<List<ResultCarWithBrandDtos>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultCarWithBrandDto>>(jsonData);
 
                 return View(values);
             }
